@@ -1,0 +1,100 @@
+.aichatroom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 98dvh;
+  background-color: #f3f4f6;
+  border-left: 1px solid #d1d5db;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.display-result {
+  width: 96%;
+  height: 68vh;
+  overflow-y: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  max-width: 90%;
+  word-wrap: break-word;
+}
+
+.message.user {
+  width: 100%;
+  color: #000000;
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.message.ai {
+  background-color: #0288d1;
+  color: white;
+  align-self: flex-start;
+}
+
+.input-div {
+  display: flex;
+  width: 96%;
+  gap: 10px;
+}
+
+.aiinput {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #ffffff;
+  color: #000000;
+  outline: none;
+}
+
+.generate-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #39ff27;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.generate-btn:hover {
+  background: #0288d1;
+}
+
+.generate-btn:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .message.user {
+    width: 100%;
+    color: #000000;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .input {
+    width: 100%;
+  }
+  .generate-btn {
+    width: 100%;
+  }
+}

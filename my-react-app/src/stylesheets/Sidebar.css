@@ -1,0 +1,50 @@
+.sidebar-heading{
+  min-width: 23vw;
+  height:100dvh;
+  margin-top: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  background: #f0f2f5;
+}
+.sidebar {
+  min-width: 23vw;
+  height: 100vh;
+  overflow-y: scroll; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px;
+  scrollbar-width: none; 
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none; 
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 30vw; 
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    width: 40vw; 
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 50vw; 
+    height: 100vh; 
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100vw; 
+  }
+}

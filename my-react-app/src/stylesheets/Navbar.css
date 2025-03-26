@@ -1,0 +1,60 @@
+.userdiv1 {
+  display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    width: 85%;
+    padding: 6px 6px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 5px 0;
+    background-color: #4a5568;
+    justify-content: space-around;
+    width: 92%
+  }
+  .userdiv1 p {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff; 
+  }
+  .userletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #25d366; 
+    border-radius: 50%;
+  }
+  .userdiv1 p:first-child {
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+  
+  .userdiv1 button {
+    background-color: #ff4757; /* Red for sign-out to draw attention */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .userdiv1 button:hover {
+    background-color: #e84141; 
+  }
+  
+  .userdiv1 img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    border: 2px solid #ddd; 
+  }
