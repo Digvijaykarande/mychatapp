@@ -16,11 +16,12 @@
 
     <!-- Register Service Worker -->
     <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/mychatapp/service-worker.js')
-                .then(reg => console.log('✅ Service Worker registered successfully!', reg))
-                .catch(err => console.error('❌ Service Worker registration failed:', err));
-        }
+       if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js') // ✅ Correct filename
+        .then(reg => console.log('Service Worker registered successfully!', reg))
+        .catch(err => console.error('Service Worker registration failed:', err));
+}
+
     </script>
   <script type="module" crossorigin src="/assets/index-x_cByQ0F.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-brOnZgGe.css">
