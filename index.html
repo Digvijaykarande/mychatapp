@@ -1,15 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <script type="module" crossorigin src="/mychatapp/assets/index-x_cByQ0F.js"></script>
-    <link rel="stylesheet" crossorigin href="/mychatapp/assets/index-brOnZgGe.css">
-  </head>
-  <body>
+    <title>My Chat App</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/icon-192x192.png" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/mychatapp/manifest.json">
+
+    <!-- Register Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(registration => {
+                    console.log('✅ Service Worker registered successfully!', registration);
+
+                    // Auto-update Service Worker when a new version is available
+                    registration.onupdatefound = () => {
+                        const newWorker = registration.installing;
+                        newWorker.onstatechange = () => {
+                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                console.log('🔄 New version available! Reloading...');
+                                window.location.reload();
+                            }
+                        };
+                    };
+                })
+                .catch(error => {
+                    console.error('❌ Service Worker registration failed:', error);
+                });
+        } else {
+            console.warn('⚠️ Service Worker not supported in this browser.');
+        }
+    </script>
+  <script type="module" crossorigin src="/mychatapp/assets/index-x_cByQ0F.js"></script>
+  <link rel="stylesheet" crossorigin href="/mychatapp/assets/index-brOnZgGe.css">
+<link rel="manifest" href="/mychatapp/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/mychatapp/registerSW.js"></script></head>
+<body>
     <div id="root"></div>
-  </body>
+</body>
 </html>
