@@ -1,14 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
+    <title>My Chat App</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/mychatapp/icon-192x192.png" />
+
+    <!-- Styles -->
+    
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/mychatapp/manifest.json" />
+
+    <!-- Register Service Worker -->
+    <script>
+       if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js') // ✅ Correct filename
+        .then(reg => console.log('Service Worker registered successfully!', reg))
+        .catch(err => console.error('Service Worker registration failed:', err));
+}
+
+    </script>
+</head>
+<body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+</body>
 </html>

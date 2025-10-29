@@ -50,6 +50,7 @@
   @media (max-width: 768px) {
     .input {
       padding: 8px;
+      margin-bottom: 8px;
     }
   
     .input input {

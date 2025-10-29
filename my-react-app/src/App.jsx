@@ -19,7 +19,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter >
+    <BrowserRouter basename="/mychatapp">
       <Routes>
         <Route path="/" element={
             <ProtectedRoute>
